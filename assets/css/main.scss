@@ -18,32 +18,37 @@ h1{
 
 body{
   .container{
-
-    height: 90vh;
-display: flex;
-
+    border: aqua 3px solid;
+    display: flex;
+    margin: 3vw;
+    width: 90vw;
+    height: 50vh;
+    justify-self: center;
     .P1{
-      display: grid;
-      grid-template-columns:  1fr;
-      grid-template-rows:  1fr 1fr;
+      margin: 2vw 0 2vw 2vw;
+      border: aqua 3px solid;
+      flex: 1;
       background-image: url("../img/bg1-01.svg");
       background-repeat: no-repeat;
+      justify-items: center;
+      width: 38vw;
+      height: 40vh;
 
       #input{
         border: black 0.5vh solid;
         border-radius: 5px;
         padding: 1.2vw;
-
-        width: 50%;
+        position: relative;
       }
 
     }
     .btn{
+      position: relative;
       border: black 0.5vh solid;
       border-radius: 5px;
       padding: 1.2vw;
       background: #ffc05d;
-      font-size: larger;
+
 
     }.btn:hover{
        background: #ffa65b;
@@ -51,11 +56,14 @@ display: flex;
      }
 
     .P2{
-      display: grid;
-      grid-template-columns:  1fr;
-      grid-template-rows:  1fr 1fr;
+      margin: 2vw 2vw 0 0vw;
+      border: aqua 3px solid;
       background-image: url("../img/bg2-02.svg");
       background-repeat: no-repeat;
+      flex:1;
+      justify-items: center;
+      width: 38vw;
+      height: 40vh;
 
     }
 
@@ -64,5 +72,20 @@ display: flex;
 
 
 
+  @media only screen and (max-width: 600px) {
+    .container {
+      border: aqua 3px solid;
+      display: block;
+      margin: 3vw;
+      width: 90vw;
+      height: 50vh;
+      justify-self: center;
+
+      .P1,.P2{
+        width: 90vw;
+        height: 50vh;
+      }
+    }
+  }
 }
 
