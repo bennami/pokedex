@@ -49,7 +49,8 @@ let moves=[];
     moves.push(allMoves);
 
   }
-//filter out 4 random moves
+
+//filter out a random move
  for(i=0;i<4;i++){
  var randomItem = moves[Math.floor(Math.random()*moves.length)];
  }

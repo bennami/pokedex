@@ -1,7 +1,7 @@
 * {
   margin: 0;
   font-family: "LoRes 12 OT", sans-serif;
-  font-size: 2vmax;
+  font-size: 1.5vmax;
 }
 
 h1 {
@@ -13,6 +13,10 @@ h1 {
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
   font-style: normal;
   font-weight: 100;
+}
+body img {
+  width: 40%;
+  position: relative;
 }
 body .container {
   border: aqua 3px solid;
@@ -27,7 +31,7 @@ body .container .P1 {
   background-position: center;
   background-image: url("../img/bg1-01.svg");
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 70vh;
   width: 40vw;
 }
 body .container .P1 .pokeIcon {
@@ -57,7 +61,11 @@ body .container .P2 {
   background-repeat: no-repeat;
   background-position: center;
   width: 40vw;
-  height: 80vh;
+  height: 70vh;
+}
+body .container .P2 .description {
+  margin: 15vw 8vw 0 8vw;
+  position: relative;
 }
 @media only screen and (max-width: 600px) {
   body .container {
@@ -69,7 +77,8 @@ body .container .P2 {
   }
   body .container .P1, body .container .P2 {
     width: 80vw;
-    height: 60vh;
+    height: 50vh;
+    margin: 0;
   }
 }
 
