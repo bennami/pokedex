@@ -20,19 +20,19 @@ body{
   .container{
     border: aqua 3px solid;
     display: flex;
-    margin: 3vw;
+
     width: 90vw;
-    height: 50vh;
-    justify-self: center;
+    height: 85vh;
+    justify-content: center;
     .P1{
-      margin: 2vw 0 2vw 2vw;
+
       border: aqua 3px solid;
-      flex: 1;
+
       background-image: url("../img/bg1-01.svg");
       background-repeat: no-repeat;
-      justify-items: center;
-      width: 38vw;
-      height: 40vh;
+
+      height: 80vh;
+      width: 40vw;
 
       #input{
         border: black 0.5vh solid;
@@ -56,14 +56,13 @@ body{
      }
 
     .P2{
-      margin: 2vw 2vw 0 0vw;
+
       border: aqua 3px solid;
       background-image: url("../img/bg2-02.svg");
       background-repeat: no-repeat;
-      flex:1;
-      justify-items: center;
-      width: 38vw;
-      height: 40vh;
+      width: 40vw;
+      height: 80vh;
+
 
     }
 
@@ -76,14 +75,12 @@ body{
     .container {
       border: aqua 3px solid;
       display: block;
-      margin: 3vw;
       width: 90vw;
-      height: 50vh;
-      justify-self: center;
-
+      height: 90vh;
+      justify-content: center;
       .P1,.P2{
-        width: 90vw;
-        height: 50vh;
+        width: 80vw;
+        height: 40vh;
       }
     }
   }
