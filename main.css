@@ -1,6 +1,11 @@
 * {
   margin: 0;
   font-family: "LoRes 12 OT", sans-serif;
+  font-size: 3vmax;
+}
+
+h1 {
+  margin-bottom: 2vh;
 }
 
 @font-face {
@@ -8,6 +13,23 @@
   src: url("assets/fonts/LoRes12OT-BoldAltOakland.ttf");
   font-style: normal;
   font-weight: 100;
+}
+body .container #input {
+  border: black 0.5vh solid;
+  border-radius: 5px;
+  padding: 1.2vw;
+  font-size: larger;
+}
+body .container .btn {
+  border: black 0.5vh solid;
+  border-radius: 5px;
+  padding: 1.2vw;
+  background: #ffc05d;
+  font-size: larger;
+}
+body .container .btn:hover {
+  background: #ffa65b;
+  transition: all 0.2s;
 }
 
 /*# sourceMappingURL=main.css.map */
