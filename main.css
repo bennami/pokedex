@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  font-family: "LoRes 12 OT", sans-serif;
+}
+
+@font-face {
+  font-family: "LoRes";
+  src: url("assets/fonts/LoRes12OT-BoldAltOakland.ttf");
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=main.css.map */
