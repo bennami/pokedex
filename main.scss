@@ -18,11 +18,24 @@ h1{
 
 body{
 .container{
-  #input{
-    border: black 0.5vh solid;
-    border-radius: 5px;
-    padding: 1.2vw;
-    font-size: larger;
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+  height: 90vh;
+
+
+  .P1{
+    background-image: url("assets/img/bg1-01.svg");
+    background-repeat: no-repeat;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    #input{
+      border: black 0.5vh solid;
+      border-radius: 5px;
+      padding: 1.2vw;
+      font-size: larger;
+      width: 50%;
+    }
+
   }
   .btn{
     border: black 0.5vh solid;
@@ -30,10 +43,17 @@ body{
     padding: 1.2vw;
     background: #ffc05d;
     font-size: larger;
+    width: 25%;
   }.btn:hover{
      background: #ffa65b;
      transition: all 0.2s;
    }
+
+  .P2{
+    background-image: url("assets/img/bg2-02.svg");
+    background-repeat: no-repeat;
+
+  }
 
 
 }
