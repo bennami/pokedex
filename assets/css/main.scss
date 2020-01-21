@@ -20,22 +20,24 @@ body{
   .container{
     border: aqua 3px solid;
     display: flex;
-
     width: 90vw;
     height: 85vh;
     justify-content: center;
+    text-align: center;
     .P1{
 
       border: aqua 3px solid;
-
+      background-position: center;
       background-image: url("../img/bg1-01.svg");
       background-repeat: no-repeat;
-
       height: 80vh;
       width: 40vw;
-
+.pokeIcon{
+margin: 5vmax;
+  position: relative;
+}
       #input{
-        border: black 0.5vh solid;
+        border: black 0.7vmin solid;
         border-radius: 5px;
         padding: 1.2vw;
         position: relative;
@@ -44,7 +46,7 @@ body{
     }
     .btn{
       position: relative;
-      border: black 0.5vh solid;
+      border: black 0.7vmin solid;
       border-radius: 5px;
       padding: 1.2vw;
       background: #ffc05d;
@@ -60,6 +62,7 @@ body{
       border: aqua 3px solid;
       background-image: url("../img/bg2-02.svg");
       background-repeat: no-repeat;
+      background-position: center;
       width: 40vw;
       height: 80vh;
 
@@ -76,11 +79,11 @@ body{
       border: aqua 3px solid;
       display: block;
       width: 90vw;
-      height: 90vh;
+      height: 90vmax;
       justify-content: center;
       .P1,.P2{
         width: 80vw;
-        height: 40vh;
+        height: 60vh;
       }
     }
   }
