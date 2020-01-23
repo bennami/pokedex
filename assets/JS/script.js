@@ -76,6 +76,22 @@ let shuffle = function random(moves){
         console.log(shuffledMoves);
         let moves4 =moves.slice(0,4);
     console.log(moves4);
+
+// generate <li> for every string and append to <ul>
+for( let i=0; i<moves4.length; i++){
+
+    let node = document.createElement("li");
+    // Create a <li> node
+    let textnode = document.createTextNode(moves4[i]);
+    // Create a text node
+    node.appendChild(textnode);
+    // Append the text to <li>
+    document.getElementById("movesList").appendChild(node);
+    // Append <li> to <ul> 
+}
+
+
+
 }
 
 
