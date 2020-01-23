@@ -42,23 +42,42 @@ pokeIcon.src = pObject.sprites.front_default;
 pokeDescription.innerHTML = pSpecies.flavor_text_entries[2].flavor_text;
 
 //get all moves in array
-let moves=[];
-  for(i=0; i< pObject.moves.length;i++){
+    let moves=[];
+    function setMoves() {
+//get all moves into an array
+        for (i = 0; i < pObject.moves.length; i++) {
+            let allMoves = pObject.moves[i].move.name;
+            moves.push(allMoves);
 
-    let allMoves = pObject.moves[i].move.name;
-    moves.push(allMoves);
+        }
+    }
+    setMoves();
+    console.log(moves);
 
-  }
+ //randomize moves array. pass array into random function
+let shuffle = function random(moves){
+    let movesRandom,
+        temp;
 
-//filter out a random move
- for(i=0;i<4;i++){
- var randomItem = moves[Math.floor(Math.random()*moves.length)];
- }
- console.log(randomItem);
+    //this will exchange values of array
+    //iterate through array backwards
+    for( let i = moves.length -1; i>0 ; i-- ){
+         movesRandom = Math.floor( Math.random() * (i+1));
+         temp = moves[i];
+         moves[i]= moves[movesRandom];
+         moves[movesRandom] = temp;
 
+         }
 
+         return moves;
 
+         };
+        let shuffledMoves = shuffle(moves);
+        console.log(shuffledMoves);
+        let moves4 =moves.slice(0,4);
+    console.log(moves4);
 }
+
 
 
 
