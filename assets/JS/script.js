@@ -5,10 +5,15 @@ const pokeDescription = document.querySelector('.description');
 const poeMoves = document.querySelector('.movesList');
 const evolutionIcon = document.querySelector('.evolutionIcon');
 let evolutionName = document.querySelector('.evolutionName');
+let evolutionDiv = document.querySelector('.EvolutionIcon');
+let descriptionDiv = document.querySelector('.Descriptionbox');
+let movesDiv = document.querySelector('.movesList');
+
 
 //click event
 document.getElementById('inputBtn').addEventListener('click', function getName(){
-
+evolutionDiv.style.display = 'none';
+movesDiv.style.display = 'none';
  let inputName = document.getElementById('input').value;
 //invoke function to fetch JSON with input name as parameter
  getPokemon(inputName);
@@ -90,7 +95,8 @@ for( let i=0; i< moves4.length; i++){
 
 }
 
-
+//toggle through info with buttons
+    
 
 }
 
