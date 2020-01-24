@@ -14,28 +14,29 @@ h1 {
   font-style: normal;
   font-weight: 100;
 }
-body img {
-  width: 40%;
-  position: relative;
-}
 body .container {
   border: aqua 3px solid;
   display: flex;
   width: 90vw;
-  height: 85vh;
+  height: 70vh;
   justify-content: center;
   text-align: center;
 }
+body .container .pokeIcon {
+  margin-top: 20vh;
+  align-self: center;
+}
 body .container .P1 {
+  display: grid;
   border: aqua 3px solid;
   background-position: center;
   background-image: url("../img/bg1-01.svg");
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 65vh;
   width: 40vw;
 }
-body .container .P1 .pokeIcon {
-  margin: 5vmax;
+body .container .P1 .getinput {
+  margin: 5vh 3vw 0 0;
   position: relative;
 }
 body .container .P1 #input {
@@ -56,6 +57,8 @@ body .container .btn:hover {
   transition: all 0.2s;
 }
 body .container .P2 {
+  display: grid;
+  grid-auto-columns: 1fr;
   border: aqua 3px solid;
   background-image: url("../img/bg2-02.svg");
   background-repeat: no-repeat;
@@ -67,6 +70,9 @@ body .container .P2 .description {
   margin: 15vw 8vw 0 8vw;
   position: relative;
 }
+body ul {
+  list-style-type: none;
+}
 @media only screen and (max-width: 600px) {
   body .container {
     border: aqua 3px solid;
@@ -74,6 +80,9 @@ body .container .P2 .description {
     width: 90vw;
     height: 90vmax;
     justify-content: center;
+  }
+  body .container .pokeIcon {
+    margin-top: 120px;
   }
   body .container .P1, body .container .P2 {
     width: 80vw;
