@@ -9,11 +9,13 @@ let evolutionDiv = document.querySelector('.EvolutionIcon');
 let descriptionDiv = document.querySelector('.Descriptionbox');
 let movesDiv = document.querySelector('.movesList');
 
-
+pokeIcon.style.display='none';
 //click event
 document.getElementById('inputBtn').addEventListener('click', function getName(){
 evolutionDiv.style.display = 'none';
 movesDiv.style.display = 'none';
+pokeName.style.display='none';
+pokeIcon.style.display='flex';
  let inputName = document.getElementById('input').value;
 //invoke function to fetch JSON with input name as parameter
  getPokemon(inputName);
@@ -96,7 +98,53 @@ for( let i=0; i< moves4.length; i++){
 }
 
 //toggle through info with buttons
-    
+let descriptionCount = 0;
+document.getElementById('nextbtn').addEventListener('click', function (
+) {
+
+    if(descriptionCount === 0){
+        descriptionCount++;
+        descriptionDiv.style.display = 'none';
+        evolutionDiv.style.display = 'none';
+        movesDiv.style.display = 'block';
+    }else if(descriptionCount === 1){
+        descriptionCount++;
+        descriptionDiv.style.display = 'none';
+        evolutionDiv.style.display = 'block';
+        movesDiv.style.display = 'none';
+    }else {
+        descriptionCount = 0;
+        descriptionDiv.style.display = 'block';
+        evolutionDiv.style.display = 'none';
+        movesDiv.style.display = 'none';
+
+    }
+});
+
+//toggle through info with buttons
+    document.getElementById('previousbtn').addEventListener('click', function (
+    ) {
+
+
+        if(descriptionCount === 0){
+            descriptionCount= 2;
+            descriptionDiv.style.display = 'none';
+            evolutionDiv.style.display = 'block';
+            movesDiv.style.display = 'none';
+        }else if(descriptionCount === 2){
+            descriptionCount--;
+            descriptionDiv.style.display = 'none';
+            evolutionDiv.style.display = 'none';
+            movesDiv.style.display = 'block';
+        }else {
+            descriptionCount --;
+            descriptionDiv.style.display = 'block';
+            evolutionDiv.style.display = 'none';
+            movesDiv.style.display = 'none';
+
+        }
+    });
+
 
 }
 

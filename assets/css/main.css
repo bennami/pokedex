@@ -22,13 +22,15 @@ body .container {
   margin: auto;
 }
 body .container .pokeIcon {
-  margin-top: 20vh;
+  margin: auto;
+  margin-top: 22vmin;
   position: relative;
-  align-self: center;
+  width: 30%;
 }
 body .container .P1 {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   border: aqua 3px solid;
   background-image: url("../img/bg1-01.svg");
   background-repeat: no-repeat;
@@ -39,7 +41,7 @@ body .container .P1 {
   text-align: center;
 }
 body .container .P1 .getinput {
-  margin: 5vh 3vw 0 0;
+  margin: 18vh 3vw 0 0;
   position: relative;
 }
 body .container .P1 #input {
@@ -62,6 +64,7 @@ body .container .btn:hover {
 body .container .P2 {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   border: aqua 3px solid;
   background-image: url("../img/bg2-02.svg");
   background-repeat: no-repeat;
@@ -71,8 +74,14 @@ body .container .P2 {
   text-align: center;
 }
 body .container .P2 .description {
-  margin: 15vh 8vw 0 8vw;
+  margin: 22vh 9vw 0 9vw;
   position: relative;
+  font-size: smaller;
+}
+body .container .P2 .buttons {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin: 15vmin 2vmin 0 28vmin;
 }
 body ul {
   list-style-type: none;
@@ -96,9 +105,18 @@ body ul {
     text-align: center;
   }
   body .container .P1 .description, body .container .P2 .description {
-    margin: 25vmin 18vw 0 18vw;
+    margin: 30vmin 18vw 0 18vw;
     position: relative;
     font-size: smaller;
+  }
+  body .container .P1 .getinput, body .container .P2 .getinput {
+    margin: 15vh 3vw 0 0;
+    position: relative;
+  }
+  body .container .P1 .buttons, body .container .P2 .buttons {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 20vmin 2vmin 0 35vmin;
   }
 }
 

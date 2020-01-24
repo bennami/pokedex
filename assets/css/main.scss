@@ -27,14 +27,17 @@ body{
     margin: auto;
     .pokeIcon{
 
-      margin-top: 20vh;
+      margin: auto;
+      margin-top: 22vmin;
       position: relative;
-      align-self: center;
+
+      width: 30%;
     }
     .P1{
 
       display: grid;
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr  1fr;
       border: aqua 3px solid;
       background-image: url("../img/bg1-01.svg");
       background-repeat: no-repeat;
@@ -44,7 +47,7 @@ body{
       background-position: center;
       text-align: center;
       .getinput{
-        margin: 5vh 3vw 0 0;
+        margin: 18vh 3vw 0 0;
         position: relative;
       }
       #input{
@@ -71,6 +74,7 @@ body{
     .P2{
       display: grid;
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr  1fr;
       border: aqua 3px solid;
       background-image: url("../img/bg2-02.svg");
       background-repeat: no-repeat;
@@ -79,16 +83,21 @@ body{
       background-position: center;
       text-align: center;
 .description{
-  margin: 15vh 8vw 0 8vw;
+  margin: 22vh 9vw 0 9vw;
   position: relative;
+  font-size: smaller;
 
 }
+      .buttons{
+
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin: 15vmin  2vmin 0 28vmin;
+      }
 
     }
 
-
   }
-
 
 
   ul{
@@ -111,9 +120,20 @@ margin-top: 25vmin;
         height: 90vmin;
         text-align: center;
         .description{
-          margin: 25vmin 18vw 0 18vw;
+          margin: 30vmin 18vw 0 18vw;
           position: relative;
           font-size: smaller;
+
+        }
+        .getinput{
+          margin: 15vh 3vw 0 0;
+          position: relative;
+        }
+        .buttons{
+
+          grid-row: 2/3;
+          grid-column: 1/2;
+          margin: 20vmin  2vmin 0 35vmin;
         }
       }
 
