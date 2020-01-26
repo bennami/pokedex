@@ -55,14 +55,12 @@ let id = pObject.id;
 let types = pObject.types.map((type) => type.type.name).join(', ');
 pokeIcon.src = pObject.sprites.front_default;
 
-
-// Loop through and get english description
+// Loop through and get description that is english
 for (x = 0; x < pSpecies.flavor_text_entries.length; x++) {
     if (pSpecies.flavor_text_entries[x].language.name === "en") {
                 pokeDescription.innerHTML = pSpecies.flavor_text_entries[x].flavor_text;
         }
 }
-
 
 //get all moves in array
     let moves=[];
@@ -76,7 +74,6 @@ for (x = 0; x < pSpecies.flavor_text_entries.length; x++) {
 
  //randomize moves array. pass array into random function
 let shuffle = function random(moves){
-
     let movesRandom,
         temp;
     //this will exchange values of array, iterate through array backwards
@@ -88,12 +85,13 @@ let shuffle = function random(moves){
          }
          return moves;
          };
-         let shuffledMoves = shuffle(moves);
-         moves4 = moves.slice(0,4);
+//slice list to get first four
+moves4 = moves.slice(0,4);
 
-    //empty list after every new search
-    document.getElementById("movesList").innerHTML = " ";
-    // generate <li> for every string and append to <ul>
+//empty list after every new search
+document.getElementById("movesList").innerHTML = " ";
+
+// generate <li> for every string and append to <ul>
     for( let i=0; i< moves4.length; i++){
         let node = document.createElement("li");
         // Create a <li> node
@@ -103,7 +101,6 @@ let shuffle = function random(moves){
         // Append the text to <li>
         document.getElementById("movesList").appendChild(node);
     }
-
 
 //toggle through info with buttons
 let descriptionCount = 0;
