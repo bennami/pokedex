@@ -8,9 +8,12 @@ let evolutionDiv = document.querySelector('.EvolutionIcon');
 let descriptionDiv = document.querySelector('.Descriptionbox');
 let movesDiv = document.querySelector('.movesList');
 let moves4=[];
+
+//hiding stuff on load
 pokeIcon.style.display='none';
 evolutionIcon.style.display='none';
-//click event
+
+//search click event
 document.getElementById('inputBtn').addEventListener('click', function getName(){
 
 //hide DOM elements that shouldnt be displayed and display the ones that should be displayed
@@ -21,8 +24,8 @@ pokeIcon.style.display='block';
 descriptionDiv.style.display = 'block';
 evolutionIcon.style.display='block';
 
-//empty array every time you search for new pokemon
-moves4.length=0;
+//empty moves array every time you search for new pokemon
+moves4.length = 0;
 
 //get input name on search
 let inputName = document.getElementById('input').value;
@@ -36,7 +39,7 @@ getPokemon(inputName);
 //fetch JSON
 async function getPokemon(name) {
 
-//if input is empty correct alert the user to retype
+//if input is empty alert the user to enter a pokemon name
 if(name === ""){
     alert('type in a pokemon name!')
 }
@@ -51,15 +54,13 @@ const pSpecies =   await response2.json();
     if( pSpecies.evolves_from_species === null){
         evolutionName.innerHTML = 'no previous evolution';
         evolutionIcon.style.display='none';
-
     }else{
-
-        //get pre evolutioon name
+        //get pre evolution name
         let preEvolutionP = pSpecies.evolves_from_species.name;
         let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${preEvolutionP}`);
         let pEvolution = await res.json();
 
-//get image evolution pokemon and set to DOM element
+        //get image evolution pokemon and set to DOM element
         evolutionIcon.src = pEvolution.sprites.front_default;
         evolutionName.innerHTML = preEvolutionP;
     }
@@ -87,7 +88,7 @@ for (x = 0; x < pSpecies.flavor_text_entries.length; x++) {
     }
     setMoves();
 
- //randomize moves array. pass array into random function
+//randomize moves array. pass array into random function
 let shuffle = function random(moves){
     let movesRandom,
         temp;
@@ -100,13 +101,13 @@ let shuffle = function random(moves){
          }
          return moves;
          };
-//slice list to get first four
-moves4 = moves.slice(0,4);
+        //slice list to get first four
+        moves4 = moves.slice(0,4);
 
 //empty list after every new search
 document.getElementById("movesList").innerHTML = " ";
 
-// generate <li> for every string and append to <ul>
+//generate <li> for every string and append to <ul>
     for( let i=0; i< moves4.length; i++){
         let node = document.createElement("li");
         // Create a <li> node
@@ -138,8 +139,7 @@ document.getElementById('nextbtn').addEventListener('click', function (
             movesDiv.style.display = 'none';
         }
     });
-
-    document.getElementById('previousbtn').addEventListener('click', function (
+document.getElementById('previousbtn').addEventListener('click', function (
     ) {
         if(descriptionCount === 0){
             descriptionCount= 2;
@@ -158,8 +158,6 @@ document.getElementById('nextbtn').addEventListener('click', function (
             movesDiv.style.display = 'none';
         }
     });
-
-
 }
 
 
