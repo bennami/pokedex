@@ -78,6 +78,10 @@ body .container .P2 .description {
   position: relative;
   font-size: smaller;
 }
+body .container .P2 .movesList, body .container .P2 .evolutionIcon {
+  margin-top: 25vmin;
+  align-self: center;
+}
 body .container .P2 .buttons {
   grid-row: 2/3;
   grid-column: 1/2;

@@ -1,25 +1,31 @@
 //things we need from html
 let pokeIcon = document.querySelector('.pokeIcon');
 let pokeName = document.querySelector('.pokeName');
-const pokeDescription = document.querySelector('.description');
-const poeMoves = document.querySelector('.movesList');
-const evolutionIcon = document.querySelector('.evolutionIcon');
+let pokeDescription = document.querySelector('.description');
+let evolutionIcon = document.querySelector('.evolutionIcon');
 let evolutionName = document.querySelector('.evolutionName');
 let evolutionDiv = document.querySelector('.EvolutionIcon');
 let descriptionDiv = document.querySelector('.Descriptionbox');
 let movesDiv = document.querySelector('.movesList');
 let moves4=[];
 pokeIcon.style.display='none';
+
 //click event
 document.getElementById('inputBtn').addEventListener('click', function getName(){
+
+//hide DOM elements that shouldnt be displayed and display the ones that should be displayed
 evolutionDiv.style.display = 'none';
 movesDiv.style.display = 'none';
 pokeName.style.display='none';
 pokeIcon.style.display='flex';
 descriptionDiv.style.display = 'block';
+
+//empty array every time you search for new pokemon
 moves4.length=0;
+
+//get input name on search
 let inputName = document.getElementById('input').value;
-    console.log(moves4);
+
 //invoke function to fetch JSON with input name as parameter
 getPokemon(inputName);
 //put name back on html
@@ -40,7 +46,7 @@ const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}
 //convert to json
 const pObject =  await response1.json();
 const pSpecies =   await response2.json();
-    console.log(pObject);
+
 //get pre evolutioon name
 let preEvolutionP = pSpecies.evolves_from_species.name;
 let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${preEvolutionP}`);

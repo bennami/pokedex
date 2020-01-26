@@ -26,11 +26,9 @@ body{
     justify-content: center;
     margin: auto;
     .pokeIcon{
-
       margin: auto;
       margin-top: 22vmin;
       position: relative;
-
       width: 30%;
     }
     .P1{
@@ -88,6 +86,11 @@ body{
   font-size: smaller;
 
 }
+      .movesList, .evolutionIcon{
+        margin-top: 25vmin;
+        align-self: center;
+      }
+
       .buttons{
 
         grid-row: 2/3;
