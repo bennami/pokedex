@@ -14,7 +14,6 @@ h1 {
   font-weight: 100;
 }
 body .container {
-  border: aqua 3px solid;
   display: flex;
   width: 90vw;
   height: 70vh;
@@ -31,7 +30,6 @@ body .container .P1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  border: aqua 3px solid;
   background-image: url("../img/bg1-01.svg");
   background-repeat: no-repeat;
   width: 60vmin;
@@ -65,7 +63,6 @@ body .container .P2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  border: aqua 3px solid;
   background-image: url("../img/bg2-02.svg");
   background-repeat: no-repeat;
   width: 60vmin;
@@ -78,9 +75,12 @@ body .container .P2 .description {
   position: relative;
   font-size: smaller;
 }
-body .container .P2 .movesList, body .container .P2 .evolutionIcon {
-  margin-top: 25vmin;
+body .container .P2 .movesList, body .container .P2 .EvolutionIcon {
+  margin-top: 20vmin;
   align-self: center;
+}
+body .container .P2 .evolutionIcon {
+  margin-left: 40%;
 }
 body .container .P2 .buttons {
   grid-row: 2/3;
@@ -92,7 +92,6 @@ body ul {
 }
 @media only screen and (max-width: 600px) {
   body .container {
-    border: aqua 3px solid;
     display: block;
     width: 90vw;
     height: 90vmax;
@@ -121,6 +120,9 @@ body ul {
     grid-row: 2/3;
     grid-column: 1/2;
     margin: 20vmin 2vmin 0 35vmin;
+  }
+  body .container .P1 .evolutionIcon, body .container .P2 .evolutionIcon {
+    margin-left: 40%;
   }
 }
 

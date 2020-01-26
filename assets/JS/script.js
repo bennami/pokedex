@@ -9,7 +9,7 @@ let descriptionDiv = document.querySelector('.Descriptionbox');
 let movesDiv = document.querySelector('.movesList');
 let moves4=[];
 pokeIcon.style.display='none';
-
+evolutionIcon.style.display='none';
 //click event
 document.getElementById('inputBtn').addEventListener('click', function getName(){
 
@@ -17,8 +17,9 @@ document.getElementById('inputBtn').addEventListener('click', function getName()
 evolutionDiv.style.display = 'none';
 movesDiv.style.display = 'none';
 pokeName.style.display='none';
-pokeIcon.style.display='flex';
+pokeIcon.style.display='block';
 descriptionDiv.style.display = 'block';
+evolutionIcon.style.display='block';
 
 //empty array every time you search for new pokemon
 moves4.length=0;
@@ -47,14 +48,22 @@ const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}
 const pObject =  await response1.json();
 const pSpecies =   await response2.json();
 
-//get pre evolutioon name
-let preEvolutionP = pSpecies.evolves_from_species.name;
-let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${preEvolutionP}`);
-let pEvolution = await res.json();
+    if( pSpecies.evolves_from_species === null){
+        evolutionName.innerHTML = 'no previous evolution';
+        evolutionIcon.style.display='none';
+
+    }else{
+
+        //get pre evolutioon name
+        let preEvolutionP = pSpecies.evolves_from_species.name;
+        let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${preEvolutionP}`);
+        let pEvolution = await res.json();
 
 //get image evolution pokemon and set to DOM element
-evolutionIcon.src = pEvolution.sprites.front_default;
-evolutionName.innerHTML = preEvolutionP;
+        evolutionIcon.src = pEvolution.sprites.front_default;
+        evolutionName.innerHTML = preEvolutionP;
+    }
+
 
 //get Poke id, type, icon and description
 let id = pObject.id;

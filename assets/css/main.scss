@@ -19,7 +19,6 @@ h1{
 body{
 
   .container{
-    border: aqua 3px solid;
     display: flex;
     width: 90vw;
     height: 70vh;
@@ -36,7 +35,6 @@ body{
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr  1fr;
-      border: aqua 3px solid;
       background-image: url("../img/bg1-01.svg");
       background-repeat: no-repeat;
       width: 60vmin;
@@ -73,7 +71,6 @@ body{
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr  1fr;
-      border: aqua 3px solid;
       background-image: url("../img/bg2-02.svg");
       background-repeat: no-repeat;
       width: 60vmin;
@@ -86,11 +83,13 @@ body{
   font-size: smaller;
 
 }
-      .movesList, .evolutionIcon{
-        margin-top: 25vmin;
+      .movesList, .EvolutionIcon{
+        margin-top: 20vmin;
         align-self: center;
       }
-
+.evolutionIcon{
+  margin-left: 40%;
+}
       .buttons{
 
         grid-row: 2/3;
@@ -108,7 +107,7 @@ body{
   }
   @media only screen and (max-width: 600px) {
     .container {
-      border: aqua 3px solid;
+
       display: block;
       width: 90vw;
       height: 90vmax;
@@ -133,10 +132,12 @@ margin-top: 25vmin;
           position: relative;
         }
         .buttons{
-
           grid-row: 2/3;
           grid-column: 1/2;
           margin: 20vmin  2vmin 0 35vmin;
+        }
+        .evolutionIcon{
+          margin-left: 40%;
         }
       }
 
